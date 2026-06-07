@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>هالة ❤️</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(to bottom,#ffd6e0,#ffe9d6);
+    font-family:Tahoma,sans-serif;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    width:350px;
+    box-shadow:0 0 20px rgba(0,0,0,0.1);
+}
+
+img{
+    width:200px;
+}
+
+h1{
+    color:#ff4f7b;
+    font-size:35px;
+}
+
+.buttons{
+    margin-top:20px;
+    position:relative;
+    height:100px;
+}
+
+button{
+    border:none;
+    padding:15px 35px;
+    border-radius:50px;
+    font-size:25px;
+    cursor:pointer;
+}
+
+#yes{
+    background:#ff4f7b;
+    color:white;
+}
+
+#no{
+    background:#ddd;
+    position:absolute;
+    right:60px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<img src="https://i.imgur.com/9M0K6sM.png">
+
+<h1>هالة بتحبيني ولا لاء؟ 🥺</h1>
+
+<div class="buttons">
+<button id="yes">إي ❤️</button>
+<button id="no">لاء</button>
+</div>
+
+</div>
+
+<script>
+const noBtn = document.getElementById("no");
+
+noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * 250 - 100;
+    const y = Math.random() * 150 - 50;
+
+    noBtn.style.transform =
+    `translate(${x}px, ${y}px)`;
+});
+
+document.getElementById("yes")
+.addEventListener("click", () => {
+    document.body.innerHTML = `
+    <div style="
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(to bottom,#ffd6e0,#ffe9d6);
+    font-family:Tahoma,sans-serif;
+    ">
+        <h1 style="color:#ff4f7b;font-size:40px;">
+        😍 كنت بعرف انك بتحبيني وانا كمان بحبك ياروحي 😍
+        </h1>
+    </div>
+    `;
+});
+</script>
+
+</body>
+</html>
